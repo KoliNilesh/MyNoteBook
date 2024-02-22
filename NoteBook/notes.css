@@ -1,0 +1,344 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body {
+    border-color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(images/bg_4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.heading {
+    width: 100vw;
+    height: 5.5rem;
+    background: linear-gradient(skyblue,white);
+    color: black;
+    box-shadow: 0px 10px 16px gray;
+}
+.heading h1 {
+    line-height: 5.8rem;
+    margin-left: 2rem;
+    font-weight: 400;
+}
+.add:active {
+    transform: scale(0.98);
+}
+/* bytton Style  */
+.btn-div {
+    position: fixed;
+    top: 7rem;
+    right: 1rem;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0px;
+    font-size: inherit;
+    font-family: inherit;
+
+    
+}
+button.learn-more {
+    width: 12rem;
+    height: auto;
+}
+button.learn-more .circle {
+    transition:  all 0.45s cubic-bezier(0.65 , 0 ,0.076 , 1);
+    position: relative;
+    display: block;
+    margin: 0px;
+    width: 3rem;
+    height: 3rem;
+    background: skyblue;
+    border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65 , 0 ,0.076 , 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+}
+button.learn-more .circle .icon.arrow {
+  
+    transition: all 0.45s cubic-bezier(0.65 , 0 , 0.076 , 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: " ";
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid white ;
+    transform: rotate(45deg);    
+}
+
+button.learn-more .button-text{
+    transition:all 0.45s cubic-bezier(0.65 , 0 ,0.076 , 1) ;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 0.75rem 0px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+button.learn-more .button-text:hover{
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* main part */
+
+.note{
+    background-color: white;
+    margin: 30px 20px;
+    height: 200px;
+    width: 400px;
+    overflow-y: scroll;
+    margin-top: 7rem;
+    box-shadow: inset 1px 1px 1px skyblue;
+    inset: 0 -1px 0 gray ;
+    
+}
+.note .operation{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+}
+.note .operation button{
+    background-color: transparent;
+    border: 1px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+.note textarea{
+    outline: none;
+    font-family: inherit;
+    font-size: 1.2rem;
+    border: none;
+    height: 200px;
+    width: 97%;
+    padding: 10px;
+    margin: 5px;
+    background: linear-gradient(white , skyblue);
+}
+
+.fa-pen-to-square,
+.fa-trash-arrow-up{
+    color: white;
+    padding: 10px;
+    background-color: #2ecc71;
+    border-radius: 50%;
+}
+.fa-trash-arrow-up{
+    background-color: orange;
+}
+.fa-trash-arrow-up:hover{
+    background-color: white;
+    color: #e74c3c;
+    filter: drop-shadow(0px 10px 8px gray);
+}
+.fa-pen-to-square:hover{
+    background-color: white;
+    color: #27ae60;
+    filter: drop-shadow(0px 10px 8px gray);
+}
+.main{
+    padding: 20px;
+}
+ .hidden{
+    display: none;
+}  
+
+@media(max-width:1280px) {
+ 
+    .note{
+        margin: 20px 15px;
+        height: 170px;
+        width: 320px;
+        margin-top: 7rem;
+        margin-left: 50px;
+        
+    }
+    .btn-div {
+        position: absolute;
+        top: 7rem;
+        right: 1rem;
+        cursor: pointer;
+    }
+    
+}
+
+@media(max-width:900px) {
+ 
+    .note{
+        margin: 20px 15px;
+        height: 170px;
+        width: 340px;
+        margin-top: 7rem;
+        margin-left: 50px;
+        
+    }
+    .btn-div {
+        position: absolute;
+        top: 7rem;
+        right: 1rem;
+        cursor: pointer;
+    }
+    
+}
+@media(max-width:823px) {
+ 
+    .note{
+        margin: 20px 15px;
+        height: 170px;
+        width: 300px;
+        margin-top: 7rem;
+        margin-left: 50px;
+        
+    }
+    .btn-div {
+        position: absolute;
+        top: 7rem;
+        right: 1rem;
+        margin-right: 30%;
+    }
+    .note textarea{
+        font-size: 1.1rem;
+        
+        width: 95%;
+        padding: 8px;
+        margin: 5px;
+        
+    }
+    .fa-pen-to-square,
+    .fa-trash-arrow-up{
+    padding: 7px;
+    
+}
+@media(max-width:730px){
+    .note{
+        margin: 20px 15px;
+        height: 220px;
+        width: 450px;
+        margin-top: 7rem;
+        margin-left: 15%;
+        
+    }
+    .btn-div {
+       
+        margin-right: 27%;
+        
+    }
+    
+    
+    .fa-pen-to-square,
+    .fa-trash-arrow-up{
+    padding: 10px;
+    
+    }
+}
+@media(max-width:550px){
+   
+    .note{
+        height: 180px;
+        width: 400px;
+        margin-left: 10%;
+        
+    }
+    .btn-div {
+        right: 0rem;
+        padding: 0.5rem 0rem;
+        margin-right: 26%;
+        
+    }
+    
+    .fa-pen-to-square,
+    .fa-trash-arrow-up{
+    padding: 8px;
+    
+    }
+}
+@media(max-width:450px){
+   
+    .note{
+        height: 180px;
+        width: 340px;
+        margin-left: 10%;
+        
+    }
+    .btn-div {
+        right: 0rem;
+        padding: 0.5rem 0rem;
+        margin-right: 23%;
+    }
+    
+    .fa-pen-to-square,
+    .fa-trash-arrow-up{
+      padding: 7px;
+    
+    }
+}   
+@media(max-width:360px){
+   
+    .btn-div {
+        top: 6rem;
+        right: 1rem;
+        padding: 0.5rem 3rem;
+        margin-right: 17%;
+    }
+    
+    .note{
+        height: 140px;
+        width: 260px;
+        margin-left: 10%;
+        margin-bottom: 2rem;
+        margin-top: 5rem;
+        
+    }
+    .btn-div {
+        right: 0rem;
+        padding: 0.5rem 0rem;
+    }
+    
+    .fa-pen-to-square,
+    .fa-trash-arrow-up{
+      padding: 7px;
+    
+    }
+}   
+     
+    
+    
+}
